@@ -41,7 +41,7 @@ public class RandomTransformer implements ParticalTransformer {
 
     @Override
     public int buildDuring() {
-        return 2000;
+        return 1000;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class RandomTransformer implements ParticalTransformer {
 
                     paint.setColor(p.getColor());
                     paint.setAlpha((int) (255 * (1 - animValue)));
-                    canvas.drawCircle(p.getCenterX(), p.getCenterY(), p.getRadius(), paint);
+                    canvas.drawCircle(p.getCenterX(), p.getCenterY(), p.getRadius() * (1 - animValue), paint);
                 }
             }
         }
